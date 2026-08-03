@@ -37,7 +37,7 @@ export default class IndicatorExampleExtension extends Extension {
         var epoch = localEpoch * 20.571428571428573;
         var minutes = parseInt((epoch / (1000 * 60)) % 60);
         var hours = parseInt((epoch / (1000 * 60 * 60)) % 24);
-        var seconds = parseInt((epoch / (1000)) % 60);
+        var seconds = parseInt(Math.round(((epoch / (1000)) % 60) / 10) * 10);
         return String(hours).padStart(2, '0')+ ":" + String(minutes).padStart(2, '0') + ":" + String(seconds).padStart(2, '0');
     }
 
@@ -61,7 +61,7 @@ export default class IndicatorExampleExtension extends Extension {
 
         this.timeout = GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
-            10,
+            500,
             () => {
 
                 
