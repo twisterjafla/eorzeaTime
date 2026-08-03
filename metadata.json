@@ -1,0 +1,8 @@
+{
+  "name": "Eorzea time",
+  "description": "Renders the current Eorzia time",
+  "uuid": "twisterjafla@gmail.com",
+  "shell-version": [
+    "46"
+  ]
+}
